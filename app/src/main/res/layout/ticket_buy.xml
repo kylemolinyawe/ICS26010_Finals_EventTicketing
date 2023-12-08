@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/background">
+    <!--navbar-->
+    <LinearLayout
+        android:id="@+id/navbar"
+        android:layout_width="fill_parent"
+        android:layout_height="62.66dp"
+        android:background="@color/background"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="PxUsage"
+        android:paddingHorizontal="16.6667dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:text="Branding"
+            android:fontFamily="@font/Lumad"
+            android:textColor="@color/offWhite"/>
+        <ImageView
+            android:layout_width="31.3333dp"
+            android:layout_height="31.3333dp"
+            android:src="@drawable/hamburger" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/secondary"
+        app:layout_constraintTop_toBottomOf="@id/navbar"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navbar">
+
+        <ImageView
+            android:id="@+id/eventImage"
+            android:layout_width="match_parent"
+            android:layout_height="152.6667dp"
+            android:background="@color/secondary"/>
+
+        <LinearLayout
+            android:id="@+id/eventInformation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            android:orientation="vertical"
+            android:paddingHorizontal="16.6667dp"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/BantayogSansBold"
+                android:text="BLOOM MUSIC FESTIVAL"
+                android:textColor="@color/offWhite"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/eventLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/Baloo2Regular"
+                    android:text="SM Seaside, Cebu"
+
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+
+                <View
+                    android:layout_width="2.3333dp"
+                    android:layout_height="13.3333dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/eventVenue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+
+                    android:fontFamily="@font/Baloo2Regular"
+                    android:text="Sky Hall"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/eventTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-6dp"
+                android:fontFamily="@font/Baloo2Regular"
+                android:text="Tue - Mar 05 - 04:00 PM"
+                android:textColor="@color/white"
+
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/secondary" />
+
+        <LinearLayout
+            android:id="@+id/ticketBody"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/background"
+            android:paddingHorizontal="16.6667dp"
+            android:paddingVertical="16.6667dp">
+
+            <LinearLayout
+                android:id="@+id/ticketGroup1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="20.3333dp"
+                        android:layout_height="15.3333dp"
+                        android:src="@drawable/ticket" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/ticketType1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:fontFamily="@font/Baloo2Bold"
+                            android:text="Standard Admission"
+                            android:textColor="@color/white"
+                            android:textSize="13.3333dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/ticketPrice1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="-6dp"
+                                android:fontFamily="@font/Baloo2Bold"
+                                android:text="PHP 1660"
+                                android:textColor="@color/white"
+                                android:textSize="13.3333dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginTop="-6dp"
+                                android:fontFamily="@font/Baloo2Regular"
+                                android:text="+ Fees"
+                                android:textColor="@color/white"
+                                android:textSize="13.3333dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="end">
+
+                    <ImageView
+                        android:id="@+id/ticketDecrement1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/minus" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/BantayogSansBold"
+                        android:text="2"
+                        android:textColor="@color/white"
+                        android:textSize="32sp" />
+
+                    <ImageView
+                        android:id="@+id/ticketIncrement1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/plus" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/secondary"
+        app:layout_constraintBottom_toTopOf="@id/ticketPriceTab"/>
+    <LinearLayout
+        android:id="@+id/ticketPriceTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/background"
+        android:orientation="vertical"
+        android:paddingVertical="13.3333dp"
+        android:paddingHorizontal="16.6667dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:fontFamily="@font/Baloo2Bold"
+                    android:text="Subtotal"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"/>
+                <TextView
+                    android:id="@+id/ticketNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:fontFamily="@font/Baloo2Regular"
+                    android:text="2 Tickets"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ticketSubtotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/Baloo2Bold"
+                android:text="PHP 3320"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textAlignment="textEnd"
+                />
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_marginTop="13.3333dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:fontFamily="@font/BalooRegular"
+            android:textSize="21.3333dp"
+            android:backgroundTint="@color/primary"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

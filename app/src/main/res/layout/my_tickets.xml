@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:id="@+id/navbar"
+        android:layout_width="fill_parent"
+        android:layout_height="62.66dp"
+        android:background="@color/background"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="PxUsage"
+        android:paddingHorizontal="16.6667dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:text="Branding"
+            android:fontFamily="@font/Lumad"
+            android:textColor="@color/offWhite"/>
+        <ImageView
+            android:layout_width="31.3333dp"
+            android:layout_height="31.3333dp"
+            android:src="@drawable/hamburger" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/secondary"
+        app:layout_constraintTop_toBottomOf="@id/navbar"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navbar">
+        <RelativeLayout
+            android:id="@+id/ticketGroup1"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="242.3333dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="161.3333dp"
+                android:layout_height="88.6667dp"
+                android:layout_marginLeft="17.3333dp"
+                app:cardCornerRadius="6.6667dp"
+                >
+                <ImageView
+                    android:id="@+id/eventImage1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary"/>
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/eventImageEdited1"
+                android:layout_width="match_parent"
+                android:layout_height="232.3333dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/secondary" />
+
+            <LinearLayout
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="17.3333dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <View
+                    android:layout_width="13.3333dp"
+                    android:layout_height="2.3333dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="1.6667dp"/>
+                <TextView
+                    android:id="@+id/eventDateName1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/BantayogSansBold"
+                    android:text="MAR"
+                    android:textColor="@color/offWhite"
+                    android:textSize="16sp"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/eventDateNum1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/BantayogSansBold"
+                    android:text="05"
+                    android:textColor="@color/white"
+                    android:textSize="21.3333sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="79dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:id="@+id/eventTime1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/Baloo2Regular"
+                        android:text="Tue - 4:00 PM"
+                        android:textColor="@color/white"
+                        android:textSize="16dp" />
+                    <TextView
+                        android:id="@+id/eventTitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/BantayogSansBold"
+                        android:text="Bloom Music Festival"
+                        android:textColor="@color/white"
+                        android:textSize="16dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="9dp"
+                    >
+                    <TextView
+                        android:id="@+id/eventLocation1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/Baloo2Regular"
+                        android:text="SM Seaside, Cebu"
+                        android:textColor="@color/white"
+                        android:textSize="16dp" />
+                    <TextView
+                        android:id="@+id/eventVenue1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/Baloo2Regular"
+                        android:text="Sky Hall"
+                        android:textColor="@color/white"
+                        android:textSize="16dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="200dp"
+                android:layout_marginRight="17.3333dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/Baloo2Regular"
+                    android:text="Order"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textAlignment="textEnd"
+                    />
+                <TextView
+                    android:id="@+id/ticketId1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/Baloo2Regular"
+                    android:text="#12-421632/PH"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textAlignment="textEnd"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
