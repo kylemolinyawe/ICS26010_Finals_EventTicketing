@@ -18,13 +18,22 @@
         tools:ignore="PxUsage"
         android:paddingHorizontal="16.6667dp"
         android:gravity="center_vertical">
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="16.6667dp"
+            android:layout_height="27.08333dp"
+            android:src="@drawable/backarrow" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="35dp"
             android:layout_weight="1"
-            android:text="Branding"
-            android:fontFamily="@font/Lumad"
-            android:textColor="@color/offWhite"/>
+            android:text="Buy Tickets"
+            android:textSize="16dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="16.6667dp"
+            android:layout_marginRight="16.6667dp"
+            android:fontFamily="@font/header"
+            android:textColor="@color/primary"/>
         <ImageView
             android:layout_width="31.3333dp"
             android:layout_height="31.3333dp"
@@ -33,7 +42,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/secondary"
+        android:background="@color/primary"
         app:layout_constraintTop_toBottomOf="@id/navbar"/>
 
     <LinearLayout
@@ -49,7 +58,7 @@
             android:id="@+id/eventImage"
             android:layout_width="match_parent"
             android:layout_height="152.6667dp"
-            android:background="@color/secondary"/>
+            android:background="@color/primary"/>
 
         <LinearLayout
             android:id="@+id/eventInformation"
@@ -63,9 +72,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/BantayogSansBold"
+                android:fontFamily="@font/header"
                 android:text="BLOOM MUSIC FESTIVAL"
-                android:textColor="@color/offWhite"
+                android:textColor="@color/primary"
                 android:textSize="16sp" />
 
             <LinearLayout
@@ -78,17 +87,16 @@
                     android:id="@+id/eventLocation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/Baloo2Regular"
+                    android:fontFamily="@font/body"
                     android:text="SM Seaside, Cebu"
-
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="16dp" />
 
                 <View
                     android:layout_width="2.3333dp"
                     android:layout_height="13.3333dp"
                     android:layout_marginLeft="10dp"
-                    android:background="@color/white" />
+                    android:background="@color/black" />
 
                 <TextView
                     android:id="@+id/eventVenue"
@@ -96,9 +104,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
 
-                    android:fontFamily="@font/Baloo2Regular"
+                    android:fontFamily="@font/body"
                     android:text="Sky Hall"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="16dp" />
             </LinearLayout>
 
@@ -107,9 +115,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-6dp"
-                android:fontFamily="@font/Baloo2Regular"
+                android:fontFamily="@font/body"
                 android:text="Tue - Mar 05 - 04:00 PM"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
 
                 android:textSize="16dp" />
         </LinearLayout>
@@ -157,9 +165,9 @@
                             android:id="@+id/ticketType1"
                             android:layout_width="wrap_content"
                             android:layout_height="fill_parent"
-                            android:fontFamily="@font/Baloo2Bold"
+                            android:fontFamily="@font/header"
                             android:text="Standard Admission"
-                            android:textColor="@color/white"
+                            android:textColor="@color/primary"
                             android:textSize="13.3333dp">
 
                         <LinearLayout
@@ -172,9 +180,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="-6dp"
-                                android:fontFamily="@font/Baloo2Bold"
+                                android:fontFamily="@font/header"
                                 android:text="PHP 1660"
-                                android:textColor="@color/white"
+                                android:textColor="@color/primary"
                                 android:textSize="13.3333dp" />
 
                             <TextView
@@ -182,9 +190,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="4dp"
                                 android:layout_marginTop="-6dp"
-                                android:fontFamily="@font/Baloo2Regular"
+                                android:fontFamily="@font/body"
                                 android:text="+ Fees"
-                                android:textColor="@color/white"
+                                android:textColor="@color/primary"
                                 android:textSize="13.3333dp" />
                         </LinearLayout>
                     </LinearLayout>
@@ -209,7 +217,7 @@
                         android:layout_marginLeft="20dp"
                         android:fontFamily="@font/BantayogSansBold"
                         android:text="2"
-                        android:textColor="@color/white"
+                        android:textColor="@color/primary"
                         android:textSize="32sp" />
 
                     <ImageView
@@ -248,17 +256,17 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:fontFamily="@font/Baloo2Bold"
+                    android:fontFamily="@font/header"
                     android:text="Subtotal"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="16dp"/>
                 <TextView
                     android:id="@+id/ticketNum"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:fontFamily="@font/Baloo2Regular"
+                    android:fontFamily="@font/body"
                     android:text="2 Tickets"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="16dp"/>
             </LinearLayout>
 
@@ -266,21 +274,24 @@
                 android:id="@+id/ticketSubtotal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/Baloo2Bold"
+                android:fontFamily="@font/header"
                 android:text="PHP 3320"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="16dp"
                 android:textAlignment="textEnd"
                 />
         </LinearLayout>
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnNext"
-            android:layout_marginTop="13.3333dp"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Next"
-            android:fontFamily="@font/BalooRegular"
-            android:textSize="21.3333dp"
-            android:backgroundTint="@color/primary"/>
+            android:fontFamily="@font/header"
+            android:textSize="16sp"
+            android:paddingVertical="13.3333dp"
+            android:background="@drawable/button"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_marginTop="13.3333dp"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
