@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+    <!--navbar-->
+    <LinearLayout
+        android:id="@+id/navbar"
+        android:layout_width="fill_parent"
+        android:layout_height="62.66dp"
+        android:background="@color/background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16.6667dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="16.6667dp"
+            android:layout_height="27.08333dp"
+            android:src="@drawable/backarrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="16.6667dp"
+            android:layout_marginRight="16.6667dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/header"
+            android:gravity="center_vertical"
+            android:text="Buy Tickets"
+            android:textColor="@color/primary"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:layout_width="31.3333dp"
+            android:layout_height="31.3333dp"
+            android:src="@drawable/hamburger" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/primary"
+        app:layout_constraintTop_toBottomOf="@id/navbar"/>
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navbar">
+        <ImageView
+            android:id="@+id/eventFloorPlanImg"
+            android:layout_width="match_parent"
+            android:layout_height="233.3333dp"
+            android:background="@color/primary"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/ticket1Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_border_bottom"
+                android:paddingHorizontal="16.6667dp"
+                android:paddingVertical="10dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/ticket1TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/headerblack"
+                        android:gravity="center_vertical"
+                        android:text="Ticket 1"
+                        android:textColor="@color/primary"
+                        android:textSize="21.3333dp" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="6.6667dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/header"
+                            android:gravity="center_vertical"
+                            android:text="Type"
+                            android:textColor="@color/primary"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:id="@+id/ticket1Type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/body"
+                            android:gravity="center_vertical"
+                            android:text="Standard Admission"
+                            android:textColor="@color/primary"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="6.6667dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/header"
+                            android:gravity="center_vertical"
+                            android:text="Reference Number"
+                            android:textColor="@color/primary"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:id="@+id/ticket1RefNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/body"
+                            android:gravity="center_vertical"
+                            android:text="#12 - 392A1F"
+                            android:textColor="@color/primary"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="bottom">
+                    <TextView
+                        android:id="@+id/ticket1SeatingType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/header"
+                        android:gravity="center_vertical"
+                        android:text="Choose zone"
+                        android:textColor="@color/primary"
+                        android:textSize="16dp" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/edit_text_border">
+                        <Spinner
+                            android:id="@+id/ticket1SeatChoice"
+                            android:layout_marginTop="3.3333dp"
+                            android:layout_width="94.6667dp"
+                            android:layout_height="45.3333dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ticket2Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_border_bottom"
+                android:paddingHorizontal="16.6667dp"
+                android:paddingVertical="10dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/ticket2TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/headerblack"
+                        android:gravity="center_vertical"
+                        android:text="Ticket 2"
+                        android:textColor="@color/primary"
+                        android:textSize="21.3333dp" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="6.6667dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/header"
+                            android:gravity="center_vertical"
+                            android:text="Type"
+                            android:textColor="@color/primary"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:id="@+id/ticket2Type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/body"
+                            android:gravity="center_vertical"
+                            android:text="Standard Admission"
+                            android:textColor="@color/primary"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="6.6667dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/header"
+                            android:gravity="center_vertical"
+                            android:text="Reference Number"
+                            android:textColor="@color/primary"
+                            android:textSize="16dp" />
+                        <TextView
+                            android:id="@+id/ticket2RefNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/body"
+                            android:gravity="center_vertical"
+                            android:text="#03 - 3FB73F"
+                            android:textColor="@color/primary"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="bottom">
+                    <TextView
+                        android:id="@+id/ticket2SeatingType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/header"
+                        android:gravity="center_vertical"
+                        android:text="Choose zone"
+                        android:textColor="@color/primary"
+                        android:textSize="16dp" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/edit_text_border">
+                        <Spinner
+                            android:id="@+id/ticket2SeatChoice"
+                            android:layout_marginTop="3.3333dp"
+                            android:layout_width="94.6667dp"
+                            android:layout_height="45.3333dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/secondary"
+        app:layout_constraintBottom_toTopOf="@id/ticketPriceTab"/>
+    <LinearLayout
+        android:id="@+id/ticketPriceTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/background"
+        android:orientation="vertical"
+        android:paddingVertical="13.3333dp"
+        android:paddingHorizontal="16.6667dp"
+        android:gravity="center">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm"
+            android:fontFamily="@font/header"
+            android:textSize="16sp"
+            android:paddingVertical="13.3333dp"
+            android:background="@drawable/button"
+            android:textColor="@color/white"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
