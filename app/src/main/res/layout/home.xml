@@ -24,7 +24,7 @@
             android:layout_weight="1"
             android:text="Musika!"
             android:textSize="32dp"
-            android:fontFamily="@font/migoes"
+            android:fontFamily="@font/title"
             android:textColor="@color/primary"/>
         <ImageView
             android:layout_width="31.3333dp"

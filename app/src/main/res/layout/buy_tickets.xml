@@ -213,7 +213,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
-                        android:fontFamily="@font/bantayogsansbold"
+                        android:fontFamily="@font/header"
                         android:text="2"
                         android:textColor="@color/primary"
                         android:textSize="32sp" />

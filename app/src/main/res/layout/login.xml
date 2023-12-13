@@ -21,7 +21,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/migoes"
+                android:fontFamily="@font/title"
                 android:text="Musika!"
                 android:textSize="53.3333sp"
                 android:textColor="@color/primary"/>
