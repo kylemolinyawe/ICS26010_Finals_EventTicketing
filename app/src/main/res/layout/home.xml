@@ -53,6 +53,7 @@
 
             <ImageView
                 android:id="@+id/eventImage1"
+                android:src="@mipmap/eventimage1"
                 android:layout_width="360dp"
                 android:layout_height="360dp"
                 android:scaleType="centerCrop"
