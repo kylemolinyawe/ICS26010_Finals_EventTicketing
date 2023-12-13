@@ -7,7 +7,6 @@
     <!--navbar-->
     <LinearLayout
         android:id="@+id/navbar"
-        tools:ignore="PxUsage"
         android:layout_width="fill_parent"
         android:layout_height="62.66dp"
         android:background="@color/background"
@@ -79,7 +78,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:fontFamily="@font/RobotoBlack"
+                        android:fontFamily="@font/robotoblack"
                         android:gravity="center_vertical"
                         android:text="Ticket 1"
                         android:textColor="@color/primary"
@@ -132,7 +131,7 @@
                             android:gravity="center_vertical"
                             android:text="#12 - 392A1F"
                             android:textColor="@color/primary"
-                            android:textSize="16dp" />
+                            android:textSize="16sp" />
                     </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
@@ -180,7 +179,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:fontFamily="@font/RobotoBlack"
+                        android:fontFamily="@font/robotoblack"
                         android:gravity="center_vertical"
                         android:text="Ticket 2"
                         android:textColor="@color/primary"

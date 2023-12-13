@@ -14,7 +14,6 @@
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="PxUsage"
         android:paddingHorizontal="16.6667dp"
         android:gravity="center_vertical">
         <ImageView

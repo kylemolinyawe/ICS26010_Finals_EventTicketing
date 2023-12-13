@@ -21,14 +21,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/Migoes"
+                android:fontFamily="@font/migoes"
                 android:text="Musika!"
                 android:textSize="53.3333sp"
                 android:textColor="@color/primary"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/RobotoBold"
+                android:fontFamily="@font/header"
                 android:text="Login"
                 android:textSize="21.3333sp"
                 android:layout_marginTop="66.6667dp"
