@@ -1,329 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lytMyTicketsContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background">
+    android:background="@color/background"
+    android:orientation="vertical">
 
     <!--navbar-->
     <LinearLayout
         android:id="@+id/navbar"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="62.66dp"
         android:background="@color/background"
+        android:gravity="center_vertical"
         android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:paddingHorizontal="16.6667dp"
-        android:gravity="center_vertical">
+        android:paddingHorizontal="16.6667dp">
+
         <ImageView
             android:id="@+id/btnBack"
             android:layout_width="16.6667dp"
             android:layout_height="27.08333dp"
             android:src="@drawable/backarrow" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="35dp"
-            android:layout_weight="1"
-            android:text="My Tickets"
-            android:textSize="16dp"
-            android:gravity="center_vertical"
             android:layout_marginLeft="16.6667dp"
             android:layout_marginRight="16.6667dp"
+            android:layout_weight="1"
             android:fontFamily="@font/header"
-            android:textColor="@color/primary"/>
-        <ImageView
-            android:layout_width="31.3333dp"
-            android:layout_height="31.3333dp"
-            android:src="@drawable/hamburger" />
+            android:gravity="center_vertical"
+            android:text="My Tickets"
+            android:textColor="@color/primary"
+            android:textSize="16dp" />
     </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/primary"
-        app:layout_constraintTop_toBottomOf="@id/navbar"/>
+        android:background="@color/primary" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintVertical_weight="1"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/navbar">
-
-        <RelativeLayout
-            android:id="@+id/ticket1Layout"
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="242.3333dp">
-            <androidx.cardview.widget.CardView
-                android:layout_width="161.3333dp"
-                android:layout_height="88.6667dp"
-                android:layout_marginLeft="17.3333dp"
-                app:cardCornerRadius="6.6667dp"
-                >
-                <ImageView
-                    android:id="@+id/ticket1EventImage"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/edit_text_border"/>
-            </androidx.cardview.widget.CardView>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="232.3333dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/layout_border" />
-            <LinearLayout
-                android:layout_marginTop="100dp"
-                android:layout_marginLeft="17.3333dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
-                <View
-                    android:layout_width="13.3333dp"
-                    android:layout_height="2.3333dp"
-                    android:background="@color/primary"
-                    android:layout_marginBottom="1.6667dp"/>
-                <TextView
-                    android:id="@+id/ticket1EventDateName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/header"
-                    android:text="MAR"
-                    android:textColor="@color/primary"
-                    android:textSize="16sp"
-                    android:layout_marginTop="2dp"
-                    android:gravity="center"/>
-                <TextView
-                    android:id="@+id/ticket1EventDateNum"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/header"
-                    android:text="05"
-                    android:textColor="@color/black"
-                    android:textSize="21.3333sp"
-                    android:gravity="center"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_marginTop="100dp"
-                android:layout_marginLeft="79dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    >
-                    <TextView
-                        android:id="@+id/ticket1EventTime"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/body"
-                        android:text="Tue - 4:00 PM"
-                        android:textColor="@color/black"
-                        android:textSize="16dp" />
-                    <TextView
-                        android:id="@+id/ticket1EventTitle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/header"
-                        android:text="Bloom Music Festival"
-                        android:textColor="@color/black"
-                        android:textSize="16dp" />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="9dp"
-                    >
-                    <TextView
-                        android:id="@+id/ticket1EventLocation"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/body"
-                        android:text="SM Seaside, Cebu"
-                        android:textColor="@color/black"
-                        android:textSize="16dp" />
-                    <TextView
-                        android:id="@+id/ticket1EventVenue"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/body"
-                        android:text="Sky Hall"
-                        android:textColor="@color/black"
-                        android:textSize="16dp" />
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="200dp"
-                android:layout_marginRight="17.3333dp"
-                >
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/header"
-                    android:text="Total Tickets"
-                    android:textColor="@color/primary"
-                    android:textSize="16dp"
-                    android:textAlignment="textEnd"
-                    />
-                <TextView
-                    android:id="@+id/ticket1TotalTickets"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/body"
-                    android:text="02"
-                    android:textColor="@color/primary"
-                    android:textSize="16dp"
-                    android:textAlignment="textEnd"/>
-            </LinearLayout>
-        </RelativeLayout>
-        <RelativeLayout
-            android:id="@+id/ticket2Layout"
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="242.3333dp">
-            <androidx.cardview.widget.CardView
-                android:layout_width="161.3333dp"
-                android:layout_height="88.6667dp"
-                android:layout_marginLeft="17.3333dp"
-                app:cardCornerRadius="6.6667dp"
-                >
-                <ImageView
-                    android:id="@+id/ticket2EventImage"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/edit_text_border"/>
-            </androidx.cardview.widget.CardView>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="232.3333dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/layout_border" />
-
-            <LinearLayout
-                android:layout_marginTop="100dp"
-                android:layout_marginLeft="17.3333dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
-                <View
-                    android:layout_width="13.3333dp"
-                    android:layout_height="2.3333dp"
-                    android:background="@color/primary"
-                    android:layout_marginBottom="1.6667dp"/>
-                <TextView
-                    android:id="@+id/ticket2EventDateName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/header"
-                    android:text="MAR"
-                    android:textColor="@color/primary"
-                    android:textSize="16sp"
-                    android:layout_marginTop="2dp"
-                    android:gravity="center"/>
-                <TextView
-                    android:id="@+id/ticket2EventDateNum"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/header"
-                    android:text="05"
-                    android:textColor="@color/black"
-                    android:textSize="21.3333sp"
-                    android:gravity="center"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_marginTop="100dp"
-                android:layout_marginLeft="79dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    >
-                    <TextView
-                        android:id="@+id/ticket2EventTime"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/body"
-                        android:text="Tue - 4:00 PM"
-                        android:textColor="@color/black"
-                        android:textSize="16dp" />
-                    <TextView
-                        android:id="@+id/ticket2EventTitle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/header"
-                        android:text="Bloom Music Festival"
-                        android:textColor="@color/black"
-                        android:textSize="16dp" />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="9dp"
-                    >
-                    <TextView
-                        android:id="@+id/ticket2EventLocation"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/body"
-                        android:text="SM Seaside, Cebu"
-                        android:textColor="@color/black"
-                        android:textSize="16dp" />
-                    <TextView
-                        android:id="@+id/ticket2EventVenue"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/body"
-                        android:text="Sky Hall"
-                        android:textColor="@color/black"
-                        android:textSize="16dp" />
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="200dp"
-                android:layout_marginRight="17.3333dp"
-                >
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/header"
-                    android:text="Total Tickets"
-                    android:textColor="@color/primary"
-                    android:textSize="16dp"
-                    android:textAlignment="textEnd"
-                    />
-                <TextView
-                    android:id="@+id/ticket2TotalTickets"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/body"
-                    android:text="02"
-                    android:textColor="@color/primary"
-                    android:textSize="16dp"
-                    android:textAlignment="textEnd"/>
-            </LinearLayout>
-
-        </RelativeLayout>
-
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

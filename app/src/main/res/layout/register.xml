@@ -25,14 +25,15 @@
                 android:text="Musika!"
                 android:textSize="53.3333sp"
                 android:textColor="@color/primary"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/header"
-                android:text="Login"
-                android:textSize="21.3333sp"
                 android:layout_marginTop="66.6667dp"
-                android:textColor="@color/primary"/>
+                android:fontFamily="@font/header"
+                android:text="Register"
+                android:textColor="@color/primary"
+                android:textSize="21.3333sp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -57,7 +58,7 @@
                     android:orientation="vertical"
                     android:layout_marginTop="9.6667dp">
                     <EditText
-                        android:id="@+id/etEmail"
+                        android:id="@+id/etRegEmail"
                         android:layout_width="match_parent"
                         android:layout_height="45.3333dp"
                         android:background="@drawable/edit_text_border"
@@ -96,7 +97,7 @@
                     android:orientation="vertical"
                     android:layout_marginTop="9.6667dp">
                     <EditText
-                        android:id="@+id/etPassword"
+                        android:id="@+id/etRegPassword"
                         android:layout_width="match_parent"
                         android:layout_height="45.3333dp"
                         android:background="@drawable/edit_text_border"
@@ -115,18 +116,19 @@
                         android:textColor="@color/red"
                         android:fontFamily="@font/body"/>
                 </LinearLayout>
+
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnLogin"
+                    android:id="@+id/btnRegister"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Login"
-                    android:fontFamily="@font/header"
-                    android:textSize="16sp"
-                    android:paddingVertical="13.3333dp"
+                    android:layout_marginTop="13.3333dp"
                     android:background="@drawable/button"
-                    android:textColor="@color/white"
+                    android:fontFamily="@font/header"
+                    android:paddingVertical="13.3333dp"
+                    android:text="Register"
                     android:textAllCaps="false"
-                    android:layout_marginTop="13.3333dp"/>
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
@@ -139,22 +141,24 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginBottom="66.6667dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/primary"
                     android:fontFamily="@font/body"
-                    android:text="Don't have an account?"
-                    android:textSize="16sp"/>
+                    android:text="Already have an account?"
+                    android:textColor="@color/primary"
+                    android:textSize="16sp" />
+
                 <TextView
-                    android:id="@+id/btnMoveRegister"
-                    android:layout_marginLeft="6dp"
+                    android:id="@+id/btnMoveLogin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/primary"
+                    android:layout_marginLeft="6dp"
                     android:fontFamily="@font/header"
-                    android:text="Register here"
-                    android:textSize="16sp"/>
+                    android:text="Login here"
+                    android:textColor="@color/primary"
+                    android:textSize="16sp" />
             </LinearLayout>
 
         </LinearLayout>

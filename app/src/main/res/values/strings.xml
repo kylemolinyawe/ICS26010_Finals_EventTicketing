@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">EventTicketing</string>
     <string name="selected_item">Selected item:</string>
-    <string-array name="Zones">
+    <string-array name="zones_array">
         <item>A1</item>
         <item>A2</item>
         <item>B1</item>
