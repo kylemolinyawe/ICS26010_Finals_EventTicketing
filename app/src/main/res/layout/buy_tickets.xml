@@ -34,10 +34,6 @@
             android:layout_marginRight="16.6667dp"
             android:fontFamily="@font/header"
             android:textColor="@color/primary"/>
-        <ImageView
-            android:layout_width="31.3333dp"
-            android:layout_height="31.3333dp"
-            android:src="@drawable/hamburger" />
     </LinearLayout>
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -213,6 +209,7 @@
                         android:src="@drawable/minus" />
 
                     <TextView
+                        android:id="@+id/tvTickNumber"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
@@ -272,7 +269,7 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/ticketSubtotal"
+                android:id="@+id/tvTicketSubtotal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/header"

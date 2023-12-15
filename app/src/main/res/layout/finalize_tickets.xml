@@ -34,10 +34,6 @@
             android:textColor="@color/primary"
             android:textSize="16dp" />
 
-        <ImageView
-            android:layout_width="31.3333dp"
-            android:layout_height="31.3333dp"
-            android:src="@drawable/hamburger" />
     </LinearLayout>
     <View
         android:layout_width="match_parent"
