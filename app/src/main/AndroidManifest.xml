@@ -33,6 +33,11 @@
             android:exported="false" />
 
         <activity
+            android:name=".MyTicketsActivity"
+            android:exported="false" />
+
+
+        <activity
             android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>

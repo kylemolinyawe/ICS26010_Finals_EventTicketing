@@ -62,7 +62,7 @@ class FinalizeTicketActivity : AppCompatActivity() {
         }
     }
 
-    fun addTicket(counter: Int, zones: Array<String>) {
+    private fun addTicket(counter: Int, zones: Array<String>) {
         val lytTicketsContainer = findViewById<LinearLayout>(R.id.lytTicketsContainer)
 
         val inflater = LayoutInflater.from(this)

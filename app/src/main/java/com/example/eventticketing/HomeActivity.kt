@@ -17,7 +17,10 @@ class HomeActivity :  AppCompatActivity() {
 
         val btnMyTickets = findViewById<Button>(R.id.btnMyTickets)
         btnMyTickets.setOnClickListener() {
-
+            val userEmail = intent.getStringExtra("email").toString().trim()
+            val intentMyTickets = Intent(this, MyTicketsActivity::class.java)
+            intentMyTickets.putExtra("email", userEmail)
+            startActivity(intentMyTickets)
         }
 
         val btnTickets = findViewById<Button>(R.id.btnTickets)

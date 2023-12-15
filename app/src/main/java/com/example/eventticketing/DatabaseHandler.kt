@@ -106,4 +106,33 @@ class DatabaseHandler(context: Context): SQLiteOpenHelper(context, DATABASE_NAME
     }
 
     // TODO: Create fetch_ticket function
+    @SuppressLint("Range")
+    fun fetchTicket(email: String):ArrayList<String>? {
+        val selectQuery = "SELECT * FROM " + TABLE_TICKET + " WHERE " + KEY_EMAIL + "='" + email + "'"
+        val db = this.readableDatabase
+        var cursor:Cursor? = null
+
+        try {
+            cursor = db.rawQuery(selectQuery, null)
+        } catch (e: SQLiteException) {
+            return null
+        }
+
+        val list = ArrayList<String>()
+
+        if (cursor != null && cursor.moveToFirst()) {
+            while (!cursor.isAfterLast) {
+                list.add(cursor.getString(cursor.getColumnIndex(KEY_REFNUM)))
+                cursor.moveToNext()
+            }
+            db.close()
+            cursor.close()
+            return list
+        }
+
+        db.close()
+        cursor.close()
+        return null
+    }
+
 }

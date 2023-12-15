@@ -74,7 +74,10 @@ class PaymentActivity :AppCompatActivity() {
                     Toast.makeText(this, "Something went wrong...", Toast.LENGTH_LONG).show()
                 }
 
-                // TODO Bring Back to Home
+                val userEmail = intent.getStringExtra("email").toString().trim()
+                val intentHome = Intent(this, HomeActivity::class.java)
+                intentHome.putExtra("email", userEmail)
+                startActivity(intentHome)
             }
         }
 
