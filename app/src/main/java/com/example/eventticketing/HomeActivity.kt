@@ -3,6 +3,8 @@ package com.example.eventticketing
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import android.widget.Button
 
 class HomeActivity :  AppCompatActivity() {
@@ -15,8 +17,7 @@ class HomeActivity :  AppCompatActivity() {
 
         val btnMyTickets = findViewById<Button>(R.id.btnMyTickets)
         btnMyTickets.setOnClickListener() {
-            // send to myTickets activity
-            // make sure to send with email for database
+
         }
 
         val btnTickets = findViewById<Button>(R.id.btnTickets)

@@ -12,16 +12,17 @@ import android.util.Log
 class DatabaseHandler(context: Context): SQLiteOpenHelper(context, DATABASE_NAME,
     null, DATABASE_VERSION) {
         companion object{
-        private val DATABASE_VERSION = 1
-        private val DATABASE_NAME = "TicketingDatabase"
-        private val TABLE_USER = "UserTable"
-        private val TABLE_TICKET = "TicketTable"
-        private val KEY_USERID = "UserID"
-        private val KEY_EMAIL = "Email"
-        private val KEY_PASSWORD = "Password"
-        private val KEY_TICKETID = "TicketID"
-        private val KEY_REFNUM = "ReferenceNum"
-        private val KEY_ZONE = "Zone"
+            private val DATABASE_VERSION = 1
+            private val DATABASE_NAME = "TicketingDatabase"
+            private val TABLE_USER = "UserTable"
+            private val TABLE_TICKET = "TicketTable"
+            private val KEY_USERID = "UserID"
+            private val KEY_EMAIL = "Email"
+            private val KEY_PASSWORD = "Password"
+            private val KEY_TICKETID = "TicketID"
+            private val KEY_REFNUM = "ReferenceNum"
+            private val KEY_ZONE = "Zone"
+            private val KEY_PAYMENT = "Payment"
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
@@ -30,17 +31,15 @@ class DatabaseHandler(context: Context): SQLiteOpenHelper(context, DATABASE_NAME
                 + KEY_EMAIL + " TEXT NOT NULL, "
                 + KEY_PASSWORD + " TEXT NOT NULL)")
 
-//        val CREATE_TICKETS_TABLE = ("CREATE TABLE " + TABLE_TICKET + "("
-//                + KEY_TICKETID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-//                + KEY_REFNUM + " TEXT NOT NULL, "
-//                + KEY_ZONE + " TEXT NOT NULL, "
-//                + KEY_USERID + " INTEGER, "
-//                + "FOREIGN KEY(" + KEY_USERID + ")"
-//                + " REFERENCES " + TABLE_USER
-//                + "(" + KEY_USERID + "))")
+        val CREATE_TICKETS_TABLE = ("CREATE TABLE " + TABLE_TICKET + "("
+                + KEY_TICKETID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + KEY_REFNUM + " TEXT NOT NULL, "
+                + KEY_ZONE + " TEXT NOT NULL, "
+                + KEY_PAYMENT + " TEXT NOT NULL, "
+                + KEY_EMAIL + " TEXT NOT NULL)")
 
         db?.execSQL(CREATE_USERS_TABLE)
-//        db?.execSQL(CREATE_TICKETS_TABLE)
+        db?.execSQL(CREATE_TICKETS_TABLE)
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
@@ -93,5 +92,18 @@ class DatabaseHandler(context: Context): SQLiteOpenHelper(context, DATABASE_NAME
     }
 
     // TODO: Create add_ticket function
+    fun addTicket(ticket: TicketModelClass):Long {
+        val db = this.writableDatabase
+        val contentValues = ContentValues()
+        contentValues.put(KEY_REFNUM, ticket.ticketRefNum)
+        contentValues.put(KEY_ZONE, ticket.ticketZone)
+        contentValues.put(KEY_PAYMENT, ticket.paymentMethod)
+        contentValues.put(KEY_EMAIL, ticket.userEmail)
+
+        val success = db.insert(TABLE_TICKET, null, contentValues)
+        db.close()
+        return success
+    }
+
     // TODO: Create fetch_ticket function
 }
